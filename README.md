@@ -8,7 +8,7 @@
 
 - **Frontend**: React, React Router, Axios, Tailwind CSS, Recharts, React Icons
 - **Backend**: Spring Boot, MySQL, JWT Auth  
-  👉 [Backend Repo](https://github.com/pawang001/Budget-Buddy-Backend)
+  👉 [Backend Repo](https://github.com/pawang001/BudgetBuddyBackend)
 - **Authentication**: Email/Password, Google OAuth, GitHub OAuth
 - **Deployment**: Vercel (Frontend), Render/Other (Backend)
 
