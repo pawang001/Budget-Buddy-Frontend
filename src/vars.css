@@ -1,0 +1,30 @@
+:root {
+  --color-bg: #1F1F1F;             /* Slate Gray - Main Background */
+  --color-bg-secondary: #2C2C2C;   /* Darker Background for cards/containers */
+  --color-text: #E4E4E4;           /* Primary Light Text */
+  --color-muted: #A0A0A0;          /* Subtle Muted Text */
+  --color-border: #3A3A3A;         /* Soft Borders */
+
+  /* === Primary & Hover === */
+  --color-primary: #FF6B6B;        /* Lavender - Primary CTA/Highlight */
+  --color-hover: #ea4f4f;          /* Slightly Darker Lavender for hover */
+
+  /* === Accents === */
+  --color-accent1: #A8DADC;        /* Light Cyan - Accent */
+  --color-accent2: #FFC1CC;        /* Soft Pink - Accent */
+  --color-accent3: #FFD580;        /* Warm Gold - Highlight or Balance */
+
+  /* === Semantic Colors === */
+  --color-success: #3ED598;        /* Success Green (Income) */
+  --color-danger: #FF6B6B;         /* Error Red (Expense) */
+  --color-warning: #FBBF24;        /* Optional Warning Yellow */
+
+  /* === Chart Colors === */
+  --color-chart1: #5E60CE;         /* Deep Indigo */
+  --color-chart2: #F15BB5;         /* Hot Pink */
+  --color-chart3: #00B4D8;         /* Aqua Blue */
+  --color-chart4: #FFD166;         /* Soft Orange */
+
+  /* === Typography === */
+  --font-robot: 'Roboto', sans-serif;
+}

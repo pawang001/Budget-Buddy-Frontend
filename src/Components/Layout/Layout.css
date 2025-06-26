@@ -1,0 +1,148 @@
+/* === Root Layout === */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-robot);
+  position: relative;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--color-bg-secondary);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  z-index: 1001;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.sidebar nav a:hover {
+  background-color: var(--color-border);
+}
+
+.sidebar nav a.active {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.logout-btn {
+  margin-top: auto;
+  background-color: var(--color-danger);
+  color: var(--color-text);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: var(--color-hover);
+}
+
+/* === Main Content === */
+.main-content {
+  flex-grow: 1;
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* === Mobile Header === */
+.mobile-header {
+  display: none;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 16px 20px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1002;
+  position: sticky;
+  top: 0;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile-header h1 {
+  font-size: 22px;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* === Mobile Sidebar (Responsive) === */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 60px; /* Push below header */
+    left: 0;
+    transform: translateX(-100%);
+    height: calc(100vh - 60px); /* Subtract header height */
+    width: 220px;
+    z-index: 1001;
+    background-color: var(--color-bg-secondary);
+    padding-top: 20px;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .main-content {
+    padding: 20px;
+    margin-left: 0;
+  }
+}

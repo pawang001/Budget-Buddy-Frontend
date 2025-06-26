@@ -1,0 +1,78 @@
+@import "../../vars.css";
+
+/* Dashboard main container */
+.dashboard-container {
+  padding: 24px;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header */
+.dashboard-header h1 {
+  font-size: 28px;
+  color: var(--color-muted);
+  margin-bottom: 24px;
+}
+
+/* Analytics Section */
+.modern-analytics {
+  background: var(--color-dark);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+/* Stat Cards */
+.stat-summary .modern-stat {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--color-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-left: 5px solid transparent;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.modern-stat.income {
+  border-left-color: var(--color-success);
+}
+.modern-stat.expense {
+  border-left-color: var(--color-danger);
+}
+.modern-stat.balance {
+  border-left-color: var(--color-warning);
+}
+
+/* Chart containers */
+.modern-chart, .modern-line {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .modern-analytics {
+    padding: 16px;
+  }
+
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
